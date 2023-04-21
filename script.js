@@ -16,7 +16,6 @@ buttonsContainer.classList.add("buttonsContainer");
 let partijen = ["CDA", "VVD", "PvdA", "D66", "Volt", "SP", "PVV", "ChristenUnie", "50Plus", "SGP", "GroenLinks", "FvD"];
 
 // Text wijzigen in de body
-
 title.innerText = "Kies hier uw partij";
 titleText.innerText = "De Stemwijzer";
 result.innerText = "Uitslag van het aantal stemmen";
@@ -62,13 +61,13 @@ send.addEventListener("click", function(){
             container.appendChild(text);
         }
 
-        if (buttons[i].value > highestValue){
-            highestValue = buttons[i].value;
+        if (buttons[i].value == highestValue){
             highestValueButtons.push(buttons[i].innerText);
+        } else if (buttons[i].value > highestValue){
             if (highestValueButtons.length > 1){
-                highestValueButtons.shift();
+                highestValueButtons.length = 0;
             }
-        } else if (buttons[i].value === highestValue){
+            highestValue = buttons[i].value;
             highestValueButtons.push(buttons[i].innerText);
         }
     }

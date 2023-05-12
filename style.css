@@ -48,8 +48,8 @@ div{
 }
 
 button{
-    background-color: var(--darkcolor);
-    border: none;
+    background-color: white; 
+    border: 2px solid gray;
     color: black;
     text-align: center;
     text-decoration: none;
@@ -58,10 +58,22 @@ button{
     height: 60px;
     margin-left: 20px;
     margin-top: 15px;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 0 2px grey;
+}
+
+button:hover {
+    background-color: grey;
+
+}
+
+button:active{
+    box-shadow: 0 0 0 grey, inset 4px 4px 4px grey;
+    transform: translate(6px, 6px);
 }
 
 .send{
-    background-color: #4CAF50;
+    background-color: white;
 }
 
 footer {

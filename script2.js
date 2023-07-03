@@ -22,8 +22,8 @@ footerText.innerText = "\u00A9 2023 - Kevin Xiu";
 container.appendChild(title);
 
 // Partijen in object doen
-for (let x of partijen){
-    partijenObject.push({id: x, value: 0});
+for (let partijNaam of partijen){
+    partijenObject.push({id: partijNaam, value: 0});
 }
 
 // Maakt alle buttons aan
@@ -32,7 +32,7 @@ for (let partij of partijenObject){
     button.innerText = partij.id;
     buttonsContainer.appendChild(button);
     
-    // Als er op de button geklikt wordt
+    // Het geeft elke button een addEventListener. Als er op de button geklikt wordt gaat de value omhoog met 1
     button.addEventListener("click", function(){
         partij.value++;
         console.log(partij.id, partij.value);
@@ -67,7 +67,7 @@ send.addEventListener("click", function(){
         }   
     }
 
-    // Zoekt naar partijen met de meeste stemmen
+    // Zoekt naar partijen met evenveel stemmen
     for (let partij of partijenObject){
         if (partij.value === maxStem){
             partijenMetMeesteStemmen.push(partij.id);

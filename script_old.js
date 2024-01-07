@@ -2,6 +2,7 @@
 let titleText = document.getElementById("title");
 let footerText = document.getElementById("footer");
 let container = document.getElementById("container");
+let test = document.getElementById("test");
 
 // Nieuwe elementen aanmaken
 let title = document.createElement("h2");
